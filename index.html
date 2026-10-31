@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --light: #f3f4f6;
+            --dark: #1f2937;
+            --text: #374151;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem 5%;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            display: none;
+        }
+
+        section:target,
+        section:first-of-type {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .info-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        ul.content-list {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        ul.content-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 5%;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 0.5rem;
+            }
+            nav ul li a {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 General Information Hub</h1>
+        <p>Your trusted source for essential knowledge & updates</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to Our Information Portal</h2>
+            <div class="info-card">
+                <h3>Reliable & Verified Information</h3>
+                <p>We provide accurate, up-to-date, and easy-to-understand information across various topics to help you stay informed. Our content is curated and reviewed for clarity and correctness.</p>
+            </div>
+            <div class="info-card">
+                <h3>What You Will Find Here</h3>
+                <ul class="content-list">
+                    <li>General knowledge and educational resources</li>
+                    <li>Details about our mission and services</li>
+                    <li>Answers to frequently asked questions</li>
+                    <li>Easy ways to get in touch with us</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="info-card">
+                <h3>Our Mission</h3>
+                <p>To make reliable information accessible to everyone in a simple, clear, and organized format. We believe that informed communities make better decisions and build a better future.</p>
+            </div>
+            <div class="info-card">
+                <h3>Our Vision</h3>
+                <p>To become a go-to platform where people can find trustworthy information without confusion or misinformation.</p>
+            </div>
+            <div class="info-card">
+                <h3>Our Values</h3>
+                <ul class="content-list">
+                    <li>✅ Accuracy and Truthfulness</li>
+                    <li>✅ Transparency and Clarity</li>
+                    <li>✅ Accessibility and Inclusivity</li>
+                    <li>✅ Continuous Improvement</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Information Services</h2>
+            <div class="info-card">
+                <h3>📖 Educational Resources</h3>
+                <p>Articles, guides, and summaries covering a wide range of subjects — from daily life tips to general knowledge topics.</p>
+            </div>
+            <div class="info-card">
+                <h3>🔔 Public Announcements</h3>
+                <p>Timely and verified information on important updates, community matters, and general notices.</p>
+            </div>
+            <div class="info-card">
+                <h3>📋 Reference Materials</h3>
+                <p>Well-organized reference content designed to help you find what you need quickly and easily.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="info-card">
+                <h3>Is all information on this site free?</h3>
+                <p>Yes — all information published here is free and open for everyone to access and share for non-commercial purposes.</p>
+            </div>
+            <div class="info-card">
+                <h3>How often is the content updated?</h3>
+                <p>We review and update our content regularly to ensure accuracy. Major updates are posted as soon as new verified information becomes available.</p>
+            </div>
+            <div class="info-card">
+                <h3>Can I suggest a topic?</h3>
+                <p>Absolutely! Please use our contact form to send us your suggestions — we love hearing from our visitors.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="info-card">
+                <h3>Get In Touch</h3>
+                <p>If you have questions, suggestions, or need more information, feel free to reach out:</p>
+                <ul class="content-list">
+                    <li><strong>Email:</strong> info@informationhub.local</li>
+                    <li><strong>Location:</strong> Pasig City, Philippines</li>
+                    <li><strong>Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Send a Message</h3>
+                <form style="margin-top: 1rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500;">Your Name</label>
+                        <input type="text" style="width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500;">Your Email</label>
+                        <input type="email" style="width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.3rem; font-weight: 500;">Message</label>
+                        <textarea rows="4" style="width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 4px;" required></textarea>
+                    </div>
+                    <button type="submit" style="background: var(--primary); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Information Hub. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">Committed to providing reliable information for all.</p>
+    </footer>
+
+    <script>
+        // Active navigation link highlighting
+        const navLinks = document.querySelectorAll('nav a');
+        
+        function setActiveLink() {
+            let hash = window.location.hash || '#home';
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('hashchange', setActiveLink);
+        window.addEventListener('load', setActiveLink);
+
+        // Simple form submit handler
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
